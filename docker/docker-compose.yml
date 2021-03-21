@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  dev:
+    container_name: docker-file-parser_dev
+    image: docker-file-parser/dev
+    build:
+      context: ..
+      dockerfile: ./docker/Dockerfile.dev
+    volumes: 
+      - ..:/root/workspace
+    working_dir: /root/workspace
+    tty: true
+    command: "/bin/bash"
+    
